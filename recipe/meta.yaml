@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/libertem-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/libertem-{{ version }}.tar.gz
   sha256: ca427f2bf45022323b34bf2193a0d9f13867a7539d0dd9affa77f0d3e9cb9b6b
 
 build:
@@ -15,7 +15,7 @@ build:
     - libertem-server=libertem.web.cli:main
     - libertem-worker=libertem.executor.cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
